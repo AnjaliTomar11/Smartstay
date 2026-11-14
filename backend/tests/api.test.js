@@ -165,4 +165,11 @@ describe('SmartStay API', () => {
 
     expect(response.status).toBe(403);
   });
+    it('chatbot answers about availability', async () => {
+    const res = await request(app)
+      .post('/api/chatbot')
+      .send({ message: 'are rooms available?' });
+    expect(res.statusCode).toBe(200);
+    expect(res.body.reply).toBeDefined();
+  });
 });

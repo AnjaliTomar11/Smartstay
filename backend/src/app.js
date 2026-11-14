@@ -18,6 +18,7 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(sanitizeRequestBody);
+app.use('/api/chatbot', require('./routes/chatbot.routes'));
 
 app.get('/api/health', async (req, res) => {
   try {
