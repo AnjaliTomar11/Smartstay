@@ -10,6 +10,7 @@ const bookingRoutes = require('./routes/booking.routes');
 const reportRoutes = require('./routes/report.routes');
 
 const app = express();
+app.set('trust proxy', 1);
 
 app.use(helmet());
 app.use(cors({

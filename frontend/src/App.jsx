@@ -5,6 +5,7 @@ import Rooms from './pages/Rooms';
 import MyBookings from './pages/MyBookings';
 import Admin from './pages/Admin';
 import Navbar from './components/Navbar';
+import ChatWidget from './components/ChatWidget';
 
 const getUser = () => JSON.parse(localStorage.getItem('user') || 'null');
 
@@ -23,13 +24,16 @@ function Protected({ children, staffOnly = false }) {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Protected><Rooms /></Protected>} />
-      <Route path="/my-bookings" element={<Protected><MyBookings /></Protected>} />
-      <Route path="/admin" element={<Protected staffOnly><Admin /></Protected>} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <>                                   {/* ADD */}
+      <Routes>
+        <Route path="/" element={<Protected><Rooms /></Protected>} />
+        <Route path="/my-bookings" element={<Protected><MyBookings /></Protected>} />
+        <Route path="/admin" element={<Protected staffOnly><Admin /></Protected>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+      <ChatWidget />                     
+    </>                                  
   );
 }
