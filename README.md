@@ -4,6 +4,7 @@ An integrated ERP system for dynamic hotel room management and analytics.
 Micro Project at Madhav Institute of Technology and Science (MITS), Gwalior.
 
 Submitted by: Anjali Tomar (BTIT26O1017), Ankit Rajpoot (BTIT26O1018)
+
 Submitted to: Dr. Sanjiv Sharma
 
 ## Live links
